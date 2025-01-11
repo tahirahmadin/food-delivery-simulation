@@ -1,12 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Play, Pause } from 'lucide-react';
-import { useStore } from '../store/useStore';
+import React, { useEffect, useRef, useState } from "react";
+import { Play, Pause } from "lucide-react";
+import { useStore } from "../store/useStore";
 
 interface SimulationControlsProps {
-  isMobile?: boolean;
+  className?: string;
 }
 
-export const SimulationControls: React.FC<SimulationControlsProps> = ({ isMobile }) => {
+export const SimulationControls: React.FC<SimulationControlsProps> = ({
+  className,
+}) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const { simulateOrder } = useStore();
   const intervalRef = useRef<NodeJS.Timeout>();
@@ -15,7 +17,7 @@ export const SimulationControls: React.FC<SimulationControlsProps> = ({ isMobile
     if (isPlaying) {
       // Initial order
       simulateOrder();
-      
+
       // Set up interval for continuous orders
       intervalRef.current = setInterval(() => {
         simulateOrder();
@@ -41,23 +43,21 @@ export const SimulationControls: React.FC<SimulationControlsProps> = ({ isMobile
   return (
     <button
       onClick={toggleSimulation}
-      className={`fixed ${
-        isMobile ? 'bottom-4 left-4 px-4 py-2' : 'bottom-8 left-8 px-6 py-3'
-      } rounded-full shadow-xl transition-all transform hover:scale-105 hover:-translate-y-1 flex items-center gap-2 ${
-        isPlaying 
-          ? 'bg-red-500 hover:bg-red-600 text-white' 
-          : 'bg-green-500 hover:bg-green-600 text-white'
+      className={`${className} px-4 py-2 rounded-full shadow-xl transition-all transform hover:scale-105 hover:-translate-y-1 flex items-center gap-2 ${
+        isPlaying
+          ? "bg-red-500 hover:bg-red-600 text-white"
+          : "bg-green-500 hover:bg-green-600 text-white"
       }`}
     >
       {isPlaying ? (
         <>
-          <Pause className={isMobile ? "w-5 h-5" : "w-6 h-6"} strokeWidth={2.5} />
-          <span className={`font-medium ${isMobile ? 'text-sm' : ''}`}>Stop</span>
+          <Pause className="w-5 h-5" strokeWidth={2.5} />
+          <span className="font-medium text-sm">Stop</span>
         </>
       ) : (
         <>
-          <Play className={isMobile ? "w-5 h-5" : "w-6 h-6"} strokeWidth={2.5} />
-          <span className={`font-medium ${isMobile ? 'text-sm' : ''}`}>Play</span>
+          <Play className="w-5 h-5" strokeWidth={2.5} />
+          <span className="font-medium text-sm">Play</span>
         </>
       )}
     </button>
