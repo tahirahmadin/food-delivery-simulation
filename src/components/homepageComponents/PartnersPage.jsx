@@ -7,7 +7,6 @@ import {
   partners,
   chef_partners,
 } from "./data/partnersData";
-import Image from "next/image";
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 
 const Partners = () => {
@@ -16,6 +15,7 @@ const Partners = () => {
   const md = useMediaQuery(theme.breakpoints.down("md"));
   return (
     // <Layout>
+
     <div
       className="partners"
       style={{
@@ -25,7 +25,7 @@ const Partners = () => {
         position: "relative",
       }}
     >
-      <Image
+      <img
         src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/htp/noisebg.png"
         alt="FoodVerse"
         width={2000}
@@ -42,7 +42,7 @@ const Partners = () => {
           height: "20%",
         }}
       />
-      <Image
+      <img
         src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/htp/noisebg.png"
         alt="FoodVerse"
         width={2000}
@@ -59,7 +59,7 @@ const Partners = () => {
           height: "20%",
         }}
       />
-      <Image
+      <img
         src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/htp/noisebg.png"
         alt="FoodVerse"
         width={2000}
@@ -76,7 +76,7 @@ const Partners = () => {
           height: "20%",
         }}
       />
-      <Image
+      <img
         src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/htp/noisebg.png"
         alt="FoodVerse"
         width={2000}
@@ -93,7 +93,7 @@ const Partners = () => {
           height: "20%",
         }}
       />
-      <Image
+      <img
         src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/htp/noisebg.png"
         alt="FoodVerse"
         width={2000}
@@ -245,7 +245,7 @@ const Partners = () => {
         <div className="partners_partners">
           {partners?.map((partner) => (
             <div key={partner.id}>
-              <Image
+              <img
                 src={partner.image}
                 alt={partner.description}
                 width={175}
@@ -345,7 +345,7 @@ const Partners = () => {
         <div className="partners_partners" style={{ paddingTop: 0 }}>
           {chef_partners?.map((chef) => (
             <div key={chef.id}>
-              <Image
+              <img
                 src={chef.image}
                 alt={chef.description}
                 width={242}
@@ -535,7 +535,7 @@ const Partners = () => {
               className="brand_card"
               key={brand.id}
             >
-              <Image
+              <img
                 src={brand.image}
                 alt={brand.image}
                 width={200}
@@ -625,7 +625,7 @@ const Partners = () => {
               className="brand_card"
               key={brand.id}
             >
-              <Image
+              <img
                 src={brand.image}
                 alt={brand.image}
                 width={200}

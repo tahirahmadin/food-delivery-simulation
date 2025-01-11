@@ -11,17 +11,18 @@ import {
   playData,
 } from "./data/newHomeDate";
 import ReactPlayer from "react-player";
-import {
-  KeyboardArrowLeft,
-  KeyboardArrowRight,
-  KeyboardArrowUp,
-  Telegram,
-} from "lucide-react";
 
 import { restaurants, home_brands, chef_partners } from "./data/partnersData";
 import Vimeo from "@u-wave/react-vimeo";
 import { motion } from "framer-motion";
 import CommonButton from "./CommonButton";
+import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  Github,
+  MessageCircle,
+} from "lucide-react";
+import { DemoSimulation } from "../mainComponent/DemoSimulation";
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -281,7 +282,7 @@ const ExploreCard = ({
         },
       }}
     >
-      <Image
+      <img
         src={img}
         alt="Foodverse"
         width={sm ? 120 : 200}
@@ -324,26 +325,7 @@ const ExploreCard = ({
         <br />
         {description4}
       </Typography>
-      {/* <Button
-          style={{
-            cursor: "pointer",
-            minWidth: sm ? 24 : 32,
-            width: sm ? 24 : 32,
-            minHeight: sm ? 24 : 32,
-            maxHeight: sm ? 24 : 32,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            borderRadius: "50%",
-            border: "1px solid #a0a39a",
-            backgroundColor: "transparent",
-            marginTop: "auto",
-            marginLeft: "auto",
-            marginRight: sm ? "5px" : "10px",
-          }}
-        >
-          <KeyboardArrowRight style={{ color: "#fff" }} />
-        </Button> */}
+      \
     </Box>
   );
 };
@@ -381,14 +363,14 @@ const Avatar = ({ img, style, imgStyle }) => (
       ...style,
     }}
   >
-    <Image
+    <img
       src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/avatar_frame.svg"
       alt="FoodVerse"
       width={172}
       height={172}
       style={{ width: "100%", height: "100%" }}
     />
-    <Image
+    <img
       src={img}
       alt="FoodVerse"
       width={142}
@@ -427,7 +409,7 @@ function NextArrow(props) {
           zIndex: 5,
         }}
       >
-        <KeyboardArrowRight style={{ fontSize: 32, color: "#fff" }} />
+        <ArrowRightIcon style={{ fontSize: 32, color: "#fff" }} />
       </Button>
     </div>
   );
@@ -458,7 +440,7 @@ function PrevArrow(props) {
           zIndex: 5,
         }}
       >
-        <KeyboardArrowLeft style={{ fontSize: 32, color: "#fff" }} />
+        <ArrowLeftIcon style={{ fontSize: 32, color: "#fff" }} />
       </Button>
     </div>
   );
@@ -540,8 +522,8 @@ const NewHomePage = () => {
                   }}
                 >
                   <Box style={{ display: "flex", gap: "25px" }}>
-                    <Image
-                      src="/gobbl_logo.svg"
+                    <img
+                      src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/tapAssets/gobbl_logo.svg"
                       alt="FoodVerse Gobbl"
                       width={md ? 140 : 260}
                       height={md ? 60 : 100}
@@ -564,7 +546,7 @@ const NewHomePage = () => {
                     Powering the Food3 revolution with real-world perks for
                     $GOBBL Holders
                   </Typography>
-                  <Link
+                  <a
                     href="https://t.me/GobblUpBot"
                     target="_blank"
                     style={{
@@ -589,10 +571,10 @@ const NewHomePage = () => {
                           justifyContent: "center",
                         }}
                       >
-                        <Telegram style={{ fill: "#fff", fontSize: 16 }} />
+                        <Github style={{ fill: "#fff", fontSize: 16 }} />
                       </Box>
                     </CommonButton>
-                  </Link>
+                  </a>
                   <StarSvg
                     size={md ? 12 : 20}
                     color="#66FF99"
@@ -643,7 +625,7 @@ const NewHomePage = () => {
                         duration: 1.5,
                       }}
                     >
-                      <Image
+                      <img
                         src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/banner_gobbl.png"
                         alt="FoodVerse Gobbl"
                         width={560}
@@ -722,39 +704,6 @@ const NewHomePage = () => {
                 }}
               />
             </Box>
-            {/* <object
-              type="image/svg+xml"
-              data="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/home_banner.svg"
-              style={{
-                width: "100%",
-                // height: sm ? 170 : "calc(100vh - 80px)",
-              }}
-            /> */}
-            {/* {loaded && (
-              <Box
-                style={{
-                  position: "absolute",
-                  bottom: md ? "10%" : "20%",
-                  left: md ? "30%" : "38%",
-                }}
-              >
-                <Link href="/airdrop" style={{ textDecoration: "none" }}>
-                  <CommonButton
-                    style={{
-                      height: md ? 36 : 60,
-                      maxWidth: 560,
-                    }}
-                    btnStyle={{
-                      fontSize: md ? 14 : 30,
-                      borderRadius: md ? "16px" : "20px",
-                    }}
-                    btnBgStyle={{ borderRadius: md ? "16px" : "20px" }}
-                  >
-                    JOIN $GOBBL AIRDROP
-                  </CommonButton>
-                </Link>
-              </Box>
-            )} */}
           </Box>
 
           {/* first_foodchain */}
@@ -768,7 +717,7 @@ const NewHomePage = () => {
               overflow: "hidden",
             }}
           >
-            <Image
+            <img
               src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/htp/noisebg.png"
               alt="FoodVerse"
               width={2000}
@@ -837,7 +786,7 @@ const NewHomePage = () => {
                       },
                     }}
                   >
-                    <Image
+                    <img
                       src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/shushi.png"
                       alt="FoodVerse"
                       width={sm ? 220 : 300}
@@ -849,8 +798,8 @@ const NewHomePage = () => {
                     />
                   </motion.div>
                 </motion.div>
-                <Image
-                  src="/newhome/food3_network.svg"
+                <img
+                  src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/tapAssets/food3_network.svg"
                   alt="FoodVerse"
                   width={600}
                   height={450}
@@ -952,7 +901,7 @@ const NewHomePage = () => {
                     },
                   }}
                 >
-                  <Image
+                  <img
                     src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/shushi_plate.svg"
                     alt="FoodVerse"
                     width={md ? 100 : lg ? 220 : 290}
@@ -976,7 +925,7 @@ const NewHomePage = () => {
                 overflow: "hidden",
               }}
             >
-              <Image
+              <img
                 src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/htp/noisebg.png"
                 alt="FoodVerse"
                 width={2000}
@@ -1049,8 +998,8 @@ const NewHomePage = () => {
                       justifyContent: "center",
                     }}
                   >
-                    <Image
-                      src="/newhome/frenchFries.png"
+                    <img
+                      src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/tapAssets/frenchFries.png"
                       alt="FoodVerse"
                       width={1440}
                       height={517}
@@ -1076,7 +1025,7 @@ const NewHomePage = () => {
               overflow: "hidden",
             }}
           >
-            <Image
+            <img
               src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/htp/noisebg.png"
               alt="FoodVerse"
               width={2000}
@@ -1189,7 +1138,7 @@ const NewHomePage = () => {
               </Box>
               {!md && (
                 <img
-                  src="/newhome/pay_gobbl.png"
+                  src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/tapAssets/pay_gobbl.png"
                   style={{
                     width: 700,
                     height: 320,
@@ -1215,7 +1164,7 @@ const NewHomePage = () => {
               overflow: "hidden",
             }}
           >
-            <Image
+            <img
               src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/htp/noisebg.png"
               alt="FoodVerse"
               width={2000}
@@ -1278,7 +1227,7 @@ const NewHomePage = () => {
                       compete for virtual glory & real rewards!
                     </Typography>
                   </Box>
-                  <Link
+                  <a
                     href="https://t.me/GobblUpBot"
                     target="_blank"
                     style={{
@@ -1300,10 +1249,10 @@ const NewHomePage = () => {
                           justifyContent: "center",
                         }}
                       >
-                        <Telegram style={{ fill: "#fff", fontSize: 16 }} />
+                        <MessageCircle style={{ fill: "#fff", fontSize: 16 }} />
                       </Box>
                     </CommonButton>
-                  </Link>
+                  </a>
                 </Box>
                 <Box
                   style={{
@@ -1331,7 +1280,9 @@ const NewHomePage = () => {
                       }}
                     >
                       <img
-                        src={`/newhome/play${i + 1}.png`}
+                        src={`https://gobbl-bucket.s3.ap-south-1.amazonaws.com/tapAssets/play/play${
+                          i + 1
+                        }.png`}
                         style={{
                           width: "100%",
                           objectFit: "contain",
@@ -1363,45 +1314,21 @@ const NewHomePage = () => {
                   ))}
                 </Box>
               </Box>
-              {/* <motion.div
-                initial="offscreen"
-                whileInView="onscreen"
-                viewport={{ once: true, amount: 0.8 }}
-                style={{
-                  position: "absolute",
-                  top: sm ? 0 : 15,
-                  right: sm ? -10 : 0,
-                  zIndex: -1,
-                }}
-              >
-                <motion.div
-                  variants={{
-                    offscreen: {
-                      x: 250,
-                    },
-                    onscreen: {
-                      x: 0,
-                      transition: {
-                        type: "spring",
-                        bounce: 0.5,
-                        duration: 1.5,
-                      },
-                    },
-                  }}
-                >
-                  <Image
-                    src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/pizza1.svg"
-                    alt="FoodVerse"
-                    width={sm ? 100 : 180}
-                    height={400}
-                    style={{
-                      pointerEvents: "none",
-                    }}
-                  />
-                </motion.div>
-              </motion.div> */}
             </Box>
           </Box>
+
+          <div className="flex items-center justify-center h-500 bg-black">
+            <div className="max-w w-full bg-white rounded-lg shadow-lg text-center p-4">
+              <h1 className="text-4xl md:text-6xl font-extrabold text-gray-800 mb-4">
+                Play with our demo
+              </h1>
+              <p className="text-lg md:text-xl text-gray-600 mb-8">
+                Build beautiful experiences faster with our tools and
+                integrations. Start today and see what you can achieve.
+              </p>
+              <DemoSimulation />
+            </div>
+          </div>
 
           {/* meet_gobbl */}
           <Box
@@ -1414,7 +1341,7 @@ const NewHomePage = () => {
               overflow: "hidden",
             }}
           >
-            <Image
+            <img
               src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/htp/noisebg.png"
               alt="FoodVerse"
               width={2000}
@@ -1430,7 +1357,7 @@ const NewHomePage = () => {
                 height: "50%",
               }}
             />
-            <Image
+            <img
               src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/htp/noisebg.png"
               alt="FoodVerse"
               width={2000}
@@ -1509,25 +1436,16 @@ const NewHomePage = () => {
                     paddingTop: sm && "25px",
                   }}
                 >
-                  {/* {md && (
-                    <Image
-                      src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/tokenomics_mobile.png"
-                      alt="FoodVerse"
-                      width={1150}
-                      height={600}
-                    />
-                  )}
-                  {!md && ( */}
-                  <Image
-                    src="/newhome/tokenomics.png"
+                  <img
+                    src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/tapAssets/tokenomics.png"
                     alt="FoodVerse"
                     width={1150}
                     height={600}
                   />
                   {/* )} */}
                 </Box>
-                <Image
-                  src="/gobbl_token.png"
+                <img
+                  src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/tapAssets/gobbl_coin.png"
                   alt="FoodVerse"
                   width={sm ? 36 : 72}
                   height={sm ? 36 : 72}
@@ -1537,8 +1455,8 @@ const NewHomePage = () => {
                     right: sm ? "10%" : "15%",
                   }}
                 />
-                <Image
-                  src="/gobbl_token.png"
+                <img
+                  src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/tapAssets/gobbl_coin.png"
                   alt="FoodVerse"
                   width={sm ? 28 : 56}
                   height={sm ? 28 : 56}
@@ -1550,8 +1468,8 @@ const NewHomePage = () => {
                   }}
                 />
                 {!sm && (
-                  <Image
-                    src="/gobbl_token.png"
+                  <img
+                    src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/tapAssets/gobbl_coin.png"
                     alt="FoodVerse"
                     width={96}
                     height={96}
@@ -1564,8 +1482,8 @@ const NewHomePage = () => {
                   />
                 )}
                 {!sm && (
-                  <Image
-                    src="/gobbl_token.png"
+                  <img
+                    src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/tapAssets/gobbl_coin.png"
                     alt="FoodVerse"
                     width={72}
                     height={72}
@@ -1577,8 +1495,8 @@ const NewHomePage = () => {
                     }}
                   />
                 )}
-                <Image
-                  src="/gobbl_token.png"
+                <img
+                  src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/tapAssets/gobbl_coin.png"
                   alt="FoodVerse"
                   width={sm ? 28 : 56}
                   height={sm ? 28 : 56}
@@ -1589,8 +1507,8 @@ const NewHomePage = () => {
                     left: sm ? "-5%" : "32%",
                   }}
                 />
-                <Image
-                  src="/gobbl_token.png"
+                <img
+                  src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/tapAssets/gobbl_coin.png"
                   alt="FoodVerse"
                   width={sm ? 48 : 96}
                   height={sm ? 48 : 96}
@@ -1602,8 +1520,8 @@ const NewHomePage = () => {
                   }}
                 />
                 {!sm && (
-                  <Image
-                    src="/gobbl_token.png"
+                  <img
+                    src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/tapAssets/gobbl_coin.png"
                     alt="FoodVerse"
                     width={56}
                     height={56}
@@ -1640,7 +1558,7 @@ const NewHomePage = () => {
                 pointerEvents: "none",
               }}
             >
-              <Image
+              <img
                 src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/htp/noisebg.png"
                 alt="FoodVerse"
                 width={1440}
@@ -1805,10 +1723,7 @@ const NewHomePage = () => {
                       to early Gobblins. Game and claim your slice of the
                       future!
                     </Typography>
-                    <Link
-                      href="/airdrop/tasks"
-                      style={{ textDecoration: "none" }}
-                    >
+                    <a href="/airdrop/tasks" style={{ textDecoration: "none" }}>
                       <CommonButton
                         style={{
                           height: md ? 50 : 60,
@@ -1823,7 +1738,7 @@ const NewHomePage = () => {
                       >
                         JOIN $GOBBL AIRDROP
                       </CommonButton>
-                    </Link>
+                    </a>
                   </Box>
                   <Box
                     style={{
@@ -1873,7 +1788,7 @@ const NewHomePage = () => {
                             duration: 1.5,
                           }}
                         >
-                          <Image
+                          <img
                             src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/gobbl_winner.png"
                             alt="FoodVerse"
                             width={sm ? 300 : 420}
@@ -1912,7 +1827,7 @@ const NewHomePage = () => {
                       },
                     }}
                   >
-                    <Image
+                    <img
                       src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/launching_soon.svg"
                       alt="FoodVerse"
                       width={sm ? 150 : 350}
@@ -1949,7 +1864,7 @@ const NewHomePage = () => {
               zIndex: 2,
             }}
           >
-            <Image
+            <img
               src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/htp/noisebg.png"
               alt="FoodVerse"
               width={2000}
@@ -1966,7 +1881,7 @@ const NewHomePage = () => {
                 // zIndex: 3
               }}
             />
-            <Image
+            <img
               src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/htp/noisebg.png"
               alt="FoodVerse"
               width={2000}
@@ -2155,7 +2070,7 @@ const NewHomePage = () => {
                               padding: "1px",
                             }}
                           >
-                            <Image
+                            <img
                               src={brand.image}
                               alt="FoodVerse"
                               width={170}
@@ -2224,7 +2139,7 @@ const NewHomePage = () => {
                               padding: "1px",
                             }}
                           >
-                            <Image
+                            <img
                               src={chef.image}
                               alt="FoodVerse"
                               width={175}
@@ -2296,7 +2211,7 @@ const NewHomePage = () => {
                               padding: "1px",
                             }}
                           >
-                            <Image
+                            <img
                               src={restaurant.image}
                               alt="FoodVerse"
                               width={175}
@@ -2350,7 +2265,7 @@ const NewHomePage = () => {
               overflow: "hidden",
             }}
           >
-            <Image
+            <img
               src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/htp/noisebg.png"
               alt="FoodVerse"
               width={2000}
@@ -2432,7 +2347,7 @@ const NewHomePage = () => {
                     padding: "0 15px 15px",
                   }}
                 >
-                  <Image
+                  <img
                     src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/partnership1.png"
                     width={110}
                     height={110}
@@ -2454,11 +2369,11 @@ const NewHomePage = () => {
                     F&B
                     <br />
                     BRANDS
-                    <Link
+                    <a
                       target="_blank"
                       href="https://docs.google.com/forms/d/e/1FAIpQLScASnfjyROzWDHa_XH9-XA86wH7GCIhf6tZRRdaYeTssEseBg/viewform"
                     >
-                      <KeyboardArrowRight
+                      <ArrowRightIcon
                         style={{
                           width: 32,
                           height: 32,
@@ -2474,7 +2389,7 @@ const NewHomePage = () => {
                           color: "#64FF99",
                         }}
                       />
-                    </Link>
+                    </a>
                   </Box>
                 </Box>
                 <Box
@@ -2493,7 +2408,7 @@ const NewHomePage = () => {
                     padding: "0 15px 15px",
                   }}
                 >
-                  <Image
+                  <img
                     src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/partnership2.png"
                     width={110}
                     height={110}
@@ -2515,11 +2430,11 @@ const NewHomePage = () => {
                     WEB3
                     <br />
                     BUILDERS
-                    <Link
+                    <a
                       target="_blank"
                       href="https://docs.google.com/forms/d/e/1FAIpQLSf39AlUa_YSAc31G0F-qeVCegzcwwt7IyMy06fWsg8c0hCgnA/viewform"
                     >
-                      <KeyboardArrowRight
+                      <ArrowRightIcon
                         style={{
                           width: 32,
                           height: 32,
@@ -2535,7 +2450,7 @@ const NewHomePage = () => {
                           color: "#64FF99",
                         }}
                       />
-                    </Link>
+                    </a>
                   </Box>
                 </Box>
                 <Box
@@ -2554,7 +2469,7 @@ const NewHomePage = () => {
                     padding: "0 15px 15px",
                   }}
                 >
-                  <Image
+                  <img
                     src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/partnership3.png"
                     width={110}
                     height={110}
@@ -2576,11 +2491,11 @@ const NewHomePage = () => {
                     CONTENT
                     <br />
                     CREATORS
-                    <Link
+                    <a
                       target="_blank"
                       href="https://docs.google.com/forms/d/e/1FAIpQLSfocL524iwGkqC4VyGdosdHEQWZvurMJeP5Uu3lc5XEt3cwVg/viewform"
                     >
-                      <KeyboardArrowRight
+                      <ArrowRightIcon
                         style={{
                           width: 32,
                           height: 32,
@@ -2596,7 +2511,7 @@ const NewHomePage = () => {
                           color: "#64FF99",
                         }}
                       />
-                    </Link>
+                    </a>
                   </Box>
                 </Box>
               </Box>
@@ -2615,7 +2530,7 @@ const NewHomePage = () => {
               overflow: "hidden",
             }}
           >
-            <Image
+            <img
               src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/htp/noisebg.png"
               alt="FoodVerse"
               width={2000}
@@ -2701,7 +2616,7 @@ const NewHomePage = () => {
                     gap: md ? "5px" : "10px",
                   }}
                 >
-                  <Image
+                  <img
                     src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/team_frame1.svg"
                     alt="FoodVerse"
                     width={260}
@@ -2755,30 +2670,27 @@ const NewHomePage = () => {
                       marginTop: md ? 0 : "5px",
                     }}
                   >
-                    <Link
-                      href="https://twitter.com/supreetraju"
-                      target="_blank"
-                    >
-                      <Image
+                    <a href="https://twitter.com/supreetraju" target="_blank">
+                      <img
                         src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/twitter.svg"
                         alt="FoodVerse"
                         width={md ? 24 : 36}
                         height={md ? 24 : 36}
                         style={{ position: "relative", zIndex: 1 }}
                       />
-                    </Link>
-                    <Link
-                      href="https://www.linkedin.com/in/supreetraju/"
+                    </a>
+                    <a
+                      href="https://www.aedin.com/in/supreetraju/"
                       target="_blank"
                     >
-                      <Image
-                        src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/linkedIn.svg"
+                      <img
+                        src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/aedIn.svg"
                         alt="FoodVerse"
                         width={md ? 24 : 36}
                         height={md ? 24 : 36}
                         style={{ position: "relative", zIndex: 1 }}
                       />
-                    </Link>
+                    </a>
                   </Box>
                 </Box>
                 <Box
@@ -2795,7 +2707,7 @@ const NewHomePage = () => {
                     gap: md ? "5px" : "10px",
                   }}
                 >
-                  <Image
+                  <img
                     src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/team_frame1.svg"
                     alt="FoodVerse"
                     width={180}
@@ -2849,30 +2761,27 @@ const NewHomePage = () => {
                       marginTop: md ? 0 : "5px",
                     }}
                   >
-                    <Link
-                      href="https://twitter.com/gaurav_gupta9"
-                      target="_blank"
-                    >
-                      <Image
+                    <a href="https://twitter.com/gaurav_gupta9" target="_blank">
+                      <img
                         src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/twitter.svg"
                         alt="FoodVerse"
                         width={md ? 24 : 36}
                         height={md ? 24 : 36}
                         style={{ position: "relative", zIndex: 1 }}
                       />
-                    </Link>
-                    <Link
-                      href="https://www.linkedin.com/in/gauravgupta99/"
+                    </a>
+                    <a
+                      href="https://www.aedin.com/in/gauravgupta99/"
                       target="_blank"
                     >
-                      <Image
-                        src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/linkedIn.svg"
+                      <img
+                        src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/aedIn.svg"
                         alt="FoodVerse"
                         width={md ? 24 : 36}
                         height={md ? 24 : 36}
                         style={{ position: "relative", zIndex: 1 }}
                       />
-                    </Link>
+                    </a>
                   </Box>
                 </Box>
               </Box>
@@ -2906,7 +2815,7 @@ const NewHomePage = () => {
                           gap: md ? "5px" : "10px",
                         }}
                       >
-                        <Image
+                        <img
                           src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/team_frame2.svg"
                           alt="FoodVerse"
                           width={md ? 140 : 180}
@@ -2985,7 +2894,7 @@ const NewHomePage = () => {
                   },
                 }}
               >
-                <Image
+                <img
                   src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/popcorn1.svg"
                   alt="FoodVerse"
                   width={md ? 90 : 300}
@@ -3019,7 +2928,7 @@ const NewHomePage = () => {
                   },
                 }}
               >
-                <Image
+                <img
                   src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/newhome/popcorn2.png"
                   alt="FoodVerse"
                   width={md ? 90 : 300}
@@ -3041,7 +2950,7 @@ const NewHomePage = () => {
               overflow: "hidden",
             }}
           >
-            <Image
+            <img
               src="https://gobbl-bucket.s3.ap-south-1.amazonaws.com/assets/htp/noisebg.png"
               alt="FoodVerse"
               width={2000}
